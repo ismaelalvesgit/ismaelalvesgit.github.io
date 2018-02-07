@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
+<head>
+	<title>Formulario | Recadastramento</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="img/icon.png">
+	<link rel="stylesheet" href="css/style.css">
+
+<script>
+    function mascara(telefone){ 
+        if(telefone.value.length == 0)
+        telefone.value = '(' + telefone.value; //quando começamos a digitar, o script irá inserir um parênteses no começo do campo.
+        if(telefone.value.length == 4)
+        telefone.value = telefone.value + ') '; //quando o campo já tiver 3 caracteres (um parênteses e 3 números) o script irá inserir mais um parênteses, fechando assim o código de área.
+        if(telefone.value.length == 11)
+        telefone.value = telefone.value + '-'; //quando o campo já tiver 11 caracteres, o script irá inserir um tracinho, para melhor visualização do telefone.
+  
+}
+</script>
+
+</head>
+<body>
+<div id="loader-wrapper" class="loader-on">
+    <div id="loader">
+      <div class="battery">
+        <span class="battery_item"></span>
+        <span class="battery_item"></span>
+        <span class="battery_item"></span>
+      </div>
+      <div class="text">Loading ...</div>
+    </div>
+  </div>
+<header id="master-header">
+<div class="top-header">
+<div class="container">
+  <div class="row">
+    <a id="nav-toggle" href="#"><span></span></a>	
+    <div class="logo col">
+          <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+    </div>
+    <nav class="col" id="nav-menu">
+    	<img src="img/rede.png" alt="logo">
+		  <ul>
+			   <li><a href="index.html">Home</a></li>
+			   <li><a href="#">Formulários</a>
+			     <ul>
+					   <li class="selected"><a href="recadastramento.html">Recadastramento</a></li>
+					   <li><a href="inscricao.html">Inscrição</a></li>
+				    </ul>
+			   </li>
+			   <li><a href="team.html">Equipe</a></li>
+			   <li><a href="contato.html">Contato</a></li>		
+		  </ul>
+	</nav>
+</div>
+</div>
+</div>
+</header>
+<div class="jumbotron">
+<form class="form-group  form container" action="mailer/recadastramento.php" method="post" >
+	<h1>Formulário de Recadastramento 2018</h1>
+	<div class="alert alert-danger" role="alert">
+  	<strong>Atenção!</strong> não se esqueça que os campos com (*) São obrigatorios.
+	</div>
+	
+	<label for="exampleFormControlInput1">
+		<strong><i class="fa fa-user"></i> Nome *</strong>
+		<input id="exampleFormControlInput1" class="form-control required" type="text" name="nome" placeholder="Nome Completo">
+	</label>
+	
+	<label for="exampleFormControlInput1">
+		<strong><i class="fa fa-envelope"></i> Email *</strong>
+		<input id="exampleFormControlInput1" class="form-control required" type="email" name="email" placeholder="Seu Email">
+	</label>
+	
+	<label for="exampleFormControlInput1">
+		<strong><i class="fa fa-phone"></i> Numero *</strong>
+		<input id="exampleFormControlInput1" class="form-control required" type="tel" name="numero" placeholder="(XXX)XXXXX-XXXX"  onkeypress="mascara(this)" maxlength="16">
+	</label>
+	
+	<label for="exampleFormControlTextarea1">
+		<strong>o que você achou do casulo evolução no ano de 2017 ?</strong>
+		<textarea id="exampleFormControlTextarea1"  class="form-control" name="achou"></textarea>
+	</label>
+	
+	<label for="exampleFormControlInput1">
+		<strong>Deseja participar no ano de 2018 ?</strong><br>
+		<input type="radio" name="participar" value="sim">
+		<span>Sim</span>
+		<input type="radio" name="participar" value="nao">
+		<span>Não</span>
+	</label>
+	
+	<label for="exampleFormControlTextarea1">
+		<strong>Dias que você esta disponivel para nossos encontros ?</strong><br>
+		<textarea id="exampleFormControlTextarea1" class="form-control" name="dias"></textarea>
+	</label>
+	
+	<label>
+		<strong>Como você Deseja participar dos nossos encontros ?</strong><br>
+		<input type="checkbox" name="como" value="hangout">
+		<span>Hangouts</span>
+		<input type="checkbox" name="como" value="presencialmente">
+		<span>Presencialmente</span>
+	</label>
+	
+	<label for="exampleFormControlTextarea1">
+		<strong>O que você espera do casulo evolução no ano de 2018 ?</strong>
+		<textarea id="exampleFormControlTextarea1" class="form-control" name="espera"></textarea>
+	</label>
+	
+	<label for="exampleFormControlTextarea1">
+		<strong>Qual sua linguagem de programação preferida ?</strong>
+		<textarea id="exampleFormControlTextarea1" class="form-control" name="linguagem"></textarea>
+	</label>
+	
+	<label>
+		<strong>Qual e seu nivel de conchecimento dessa linguagem</strong><br>
+		<input type="radio" name="conhecimento" value="Iniciante">
+		<span>Iniciante</span>
+		<input type="radio" name="conhecimento" value="medio">
+		<span>Médio</span>
+		<input type="radio" name="conhecimento" value="Avançado">
+		<span>Avançado</span>
+		<input type="radio" name="conhecimento" value="Nenhum">
+		<span>Não responder</span>
+	</label>
+	
+	<label for="exampleFormControlTextarea1">
+		<strong>Você já desenvolveu algum projeto ?</strong>
+		<textarea id="exampleFormControlTextarea1" class="form-control" name="projeto"></textarea>
+	</label>
+	
+	<label>
+		<strong>Qual e sua especialidade ?</strong><br>
+		<input type="radio" name="especialidade" value="Front-end">
+		<span>Front-end</span>
+		<input type="radio" name="especialidade" value="Back-end">
+		<span>Back-end</span>
+		<input type="radio" name="especialidade" value="banco dados">
+		<span>Banco de dados</span>
+		<input type="radio" name="especialidade" value="Nenhum">
+		<span>Nenhuma</span>
+	</label>
+	
+	<label for="exampleFormControlTextarea1">
+		<strong>Qual e sua meta como programador para o ano de 2018 ?</strong>
+		<textarea id="exampleFormControlTextarea1" class="form-control" name="meta"></textarea>
+	</label>
+	
+	<label for="exampleFormControlTextarea1">
+		<strong>Você já trabalho na área de programação ou áreas afins ?</strong>
+		<textarea id="exampleFormControlTextarea1" class="form-control" name="trabalho"></textarea>
+	</label>
+	
+	<p>(<strong> * </strong>) = Campo obrigatório </p>
+	<div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input required" name="check">
+      <strong> Autorizo *</strong>
+    </label>
+  	</div>
+	<br><input class="btn btn-primary" type="submit" name="submit" value="Enviar">
+	<input type="hidden" name="form_type" value="recadastramento">
+</form>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="container">
+		<div class="row">
+			<div class="col-md footer_historia">
+				<h3>Nossa história</h3>
+				<p>Criado inicialmente para disseminar a cultura ágil. O grupo Casulo tornou-se um meio de transformação interdisciplinar ajudando o aluno na sua formação. Sempre com assuntos pertinentes ao Desenvolvimento de software e os frameworks ágeas, como o SCRUM.</p>
+			</div>
+			<div class="col-md footer_contato">
+				<h3>Contato</h3>
+				<ul>
+					<li>agilidade.evolucao@gmail.com</li>
+					<li>fortaleza-CE</li>
+				</ul>
+			</div>
+			<div class="col-md footer_redes">
+				<h3>Redes sociais</h3>
+				<ul>
+					<li class="facebook"><a href="https://www.facebook.com/casuloevolucao/" target="_blank"><i class="fa fa-facebook-official fa-3x"></i></a></li>
+					<li class="email"><a href="https://plus.google.com/u/0/117251638478271152417" target="_blank"><i class="fa fa-envelope fa-3x"></i></a></li>
+					<li class="git"><a href="https://github.com/casuloevolucao" target="_blank"><i class="fa fa-github fa-3x"></i></a></li>
+					<li class="youtube"><a href="https://www.youtube.com/channel/UCp9gn-aRUUC7riTRUIgi2Ow?view_as=subscriber" target="_blank"><i class="fa fa-youtube-play fa-3x"></i></a></li>
+				</ul>
+			</div>
+    </div>
+   </div> 
+	 <div class="row  footer_logo">
+      <div class="col-sm ">
+		    <a href="http://www.faculdadeevolucao.edu.br" target="_blank"><img src="img/rede.png" alt="faculdade"></a>
+      </div>
+	 </div>
+	 <div class="row">
+      <div class="col-sm footer_descricao">
+        <p>A Sociedade Evolução de Educação Superior e Tecnologia Ltda., instituição mantenedora da Faculdade Evolução, foi fundada em 12 de Junho de 1986. Com quase 30 anos no mercado de Tecnologia da Informação (TI), a Mantenedora oferece soluções nas áreas de Educação, Treinamento, Certificação, Serviços e Gestão de Talentos. Em toda sua história, a Evolução já capacitou mais de 60.000 alunos interessados em ingressar, se aperfeiçoar e melhorar seus conhecimentos na área de informática. Isto a credencia como uma instituição experiente na qualificação de profissionais e estudantes com alto nível de qualidade, através de uma diferenciada oferta de cursos e uma ampla experiência na implementação de práticas pedagógicas.</p>
+      </div>
+    </div>
+	   <div class="copy">
+	     <p>&copy; Programadores do sertão 2017 - Alguns direitos reservados</p>
+	   </div>
+	   <div class="scrollup">
+    	<a href="#"><i class="fa fa-chevron-up"></i></a>
+    	</div>
+  </div>
+</footer>
+<!-- ============ script ============ -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+</body>
+</html>

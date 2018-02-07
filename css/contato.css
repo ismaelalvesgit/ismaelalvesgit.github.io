@@ -1,0 +1,27 @@
+.title{
+	color: #000;
+}
+.map{
+	width: 100%;
+	padding-top: 50px;
+}
+.map_text h2{
+	text-align: left;
+	font-size: 48px;
+	padding-top: 150px;
+	font-family: serif;
+}
+.map_local{
+	text-align: right;
+}
+.contato{
+	padding-top: 20px;
+	padding-bottom: 60px;
+}
+.contato h2 {
+	font-size: 48px;
+	font-family: sans-serif;
+}
+.contact-form p{
+	padding-top: 10px;
+}

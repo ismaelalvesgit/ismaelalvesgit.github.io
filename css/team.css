@@ -1,0 +1,54 @@
+.title{
+	background: url(../img/equipe.jpeg) no-repeat center fixed;
+}
+.team{
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+.album {
+	margin-top: -40px;
+}
+.album h1{
+	padding-bottom: 40px;
+	text-align: center;
+	font-size: 48px;
+	font-family: serif;
+	font-weight: bold;
+}
+.titulo{
+	text-align: center;
+	font-weight: 600;
+	font-size: 48px;
+	font-family: sans-serif;
+	padding-bottom: 20px;
+
+}
+.team img{
+	max-height: 300px;
+	width: 300px;
+}
+.team strong{
+	font-size: 48px;
+	font-weight: bold;
+}
+.team p{
+	text-align: left;
+	font-size: 20px;
+}
+.team p:before , .team p:after{
+	display: block;
+    margin-bottom: 10px;
+    color: #BDC3C7;
+    font-family: 'FontAwesome';
+    content: '\f10d';
+}
+.team-link ul li{
+display: inline-block;
+}
+.team-link ul li a {
+	display: block;
+	padding-top: 20px;
+	padding: 10px;
+	transition: all .2s ease;
+	width: 100%;
+}
