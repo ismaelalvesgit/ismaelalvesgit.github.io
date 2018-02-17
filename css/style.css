@@ -3,7 +3,7 @@
 @import url("../css/reset.css");
 
 /*------------------------------
-	menu - estrutura
+	menu - desktop
 --------------------------------*/
 #master-header {
     position: relative;
@@ -233,7 +233,7 @@ nav img {
 }
 
 /*--------------------------------------------------------------
-    Mobile Navegação
+    Navegação - menu hamburgue
 --------------------------------------------------------------*/
 
  #nav-toggle {
@@ -708,26 +708,6 @@ input{
     -ms-transform: rotate(135deg);
     -o-transform: rotate(135deg);
     transform: rotate(135deg);
-}
-
-/*--------------------------------------------------------------
-    Form Loader
---------------------------------------------------------------*/
-
-.form-loader {
-    display: inline-block;
-    margin-left: 20px;
-    vertical-align: middle;
-    width: 12px;
-    height: 12px;
-    background-color: #161616;
-    border-radius: 50%;
-    content: '';
-    -webkit-animation: bounce 0.8s infinite ease-in-out;
-    -moz-animation: bounce 0.8s infinite ease-in-out;
-    -ms-animation: bounce 0.8s infinite ease-in-out;
-    -o-animation: bounce 0.8s infinite ease-in-out;
-    animation: bounce 0.8s infinite ease-in-out;
 }
 
 /*--------------------------------------------------------------

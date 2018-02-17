@@ -7,7 +7,7 @@ var config = {};
 
 config.formMessages = {
     sent          : 'Mensagem enviada com sucesso. Obrigado!',
-    fail          : 'Opa! Erro ao Enviar. Por favor, tente novamente',
+    fail          : 'Opa! Erro ao Enviar. Por favor, tente novamente ou este formúlario foi desativado',
     failEmail     : 'E-mail inválido!',
     emptyFields   : 'Complete todos os campos obrigatórios !!'
 };

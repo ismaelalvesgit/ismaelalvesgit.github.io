@@ -1,0 +1,8 @@
+# Hide .html extension
+## External Redirect
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+RewriteRule ^ %1 [R,NC]
+
+## ## Internal Redirect
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html
