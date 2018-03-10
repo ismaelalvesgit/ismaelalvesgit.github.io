@@ -51,10 +51,7 @@ if ( isset( $_POST['email'] ) ) {
 		$mail->addReplyTo( $email );
 
 		$mail->addAddress( $to );
-		if ( $send_to_artist && array_key_exists( $artist, $artists_email ) ) {
-			$mail->addAddress( $artists_email[$artist] );
-		}
-
+		
 		$mail->Subject = '=?UTF-8?B?' . base64_encode( $subject ) . '?=';
 		$mail->isHTML( true );
 		$mail->Body = $message;

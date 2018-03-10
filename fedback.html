@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
 <head>
-	<title>Formulario | Inscrição</title>
+	<title>Formulario | Fedback</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="img/icon.png">
@@ -45,12 +45,14 @@
 			   <li><a href="index.html">Home</a></li>
 			   <li><a href="#">Formulários</a>
 			     <ul>
-					   <li><a href="recadastramento.html">Recadastramento</a></li>
-					   <li class="selected"><a href="inscricao.html">Inscrição</a></li>
-                     <li><a href="exercicios.html">Exercícios</a></li>
-                     <li><a href="fedback.html">Fedback</a></li>
+					   <li class="selected"><a href="recadastramento.html">Recadastramento</a></li>
+					   <li><a href="inscricao.html">Inscrição</a></li>
+                        <li><a href="exercicios.html">Exercícios</a></li>
+                        <li class="selected"><a href="fedback.html">Fedback</a></li>
+                     
 				    </ul>
-              </li>
+			   </li>
+			   
 			   <li><a href="team.html">Equipe</a></li>
 			   <li><a href="contato.html">Contato</a></li>		
 		  </ul>
@@ -60,98 +62,56 @@
 </div>
 </header>
 <div class="jumbotron">
-<form class="form-group  form container" action="mailer/inscricao.php" method="post" >
-	<h1>Formulário de Inscrição 2018</h1>
+<form class="form-group  form container" action="mailer/fedback.php" method="post" >
+	<h1>Formulário de Fedback 2018</h1>
 	<div class="alert alert-danger" role="alert">
   	<strong>Atenção!</strong> não se esqueça que os campos com (*) São obrigatorios.
 	</div>
 	
-	<label for="exampleFormControlInput1">
-		<strong><i class="fa fa-user"></i> Nome *</strong>
-		<input id="exampleFormControlInput1" class="form-control required" type="text" name="nome" placeholder="Nome Completo">
-	</label>
-	
-	<label for="exampleFormControlInput1">
+    <label for="exampleFormControlInput1">
 		<strong><i class="fa fa-envelope"></i> Email *</strong>
 		<input id="exampleFormControlInput1" class="form-control required" type="email" name="email" placeholder="Seu Email">
 	</label>
-	
-	<label for="exampleFormControlInput1">
-		<strong><i class="fa fa-phone"></i> Numero *</strong>
-		<input id="exampleFormControlInput1" class="form-control required" type="tel" name="numero" placeholder="Whatsapp"  onkeypress="mascara(this)" maxlength="16">
+    
+	<label for="exampleFormControlTextarea1">
+		<strong>O que você esta achando da medotologia dos instrutores ?</strong><br>
+		<textarea id="exampleFormControlTextarea1" class="form-control" name="metodologia"></textarea>
 	</label>
 	
 	<label for="exampleFormControlTextarea1">
-		<strong>Dias que você esta disponivel para nossos encontros ?</strong><br>
-		<textarea id="exampleFormControlTextarea1" class="form-control" name="dias"></textarea>
-	</label>
-	
-	<label>
-		<strong>Como você Deseja participar dos nossos encontros ?</strong><br>
-		<input type="checkbox" name="como" value="hangout">
-		<span>Hangouts</span>
-		<input type="checkbox" name="como" value="presencialmente">
-		<span>Presencialmente</span>
+		<strong>Os estrutures estão capases de prender sua atenção ao conteudo ?</strong>
+		<textarea id="exampleFormControlTextarea1" class="form-control" name="atencao"></textarea>
 	</label>
 	
 	<label for="exampleFormControlTextarea1">
-		<strong>O que você espera do casulo evolução no ano de 2018 ?</strong>
-		<textarea id="exampleFormControlTextarea1" class="form-control" name="espera"></textarea>
+		<strong>O que você está achando o conteudo do casulo ?</strong>
+		<textarea id="exampleFormControlTextarea1" class="form-control" name="conteudo"></textarea>
 	</label>
 	
 	<label for="exampleFormControlTextarea1">
-		<strong>Qual sua linguagem de programação preferida ?</strong>
-		<textarea id="exampleFormControlTextarea1" class="form-control" name="linguagem"></textarea>
-	</label>
-	
-	<label>
-		<strong>Qual e seu nivel de conchecimento dessa linguagem</strong><br>
-		<input type="radio" name="conhecimento" value="Iniciante">
-		<span>Iniciante</span>
-		<input type="radio" name="conhecimento" value="medio">
-		<span>Médio</span>
-		<input type="radio" name="conhecimento" value="Avançado">
-		<span>Avançado</span>
-		<input type="radio" name="conhecimento" value="Nenhum">
-		<span>Não responder</span>
+		<strong>O que pode melhorar no casulo 2018 ?</strong>
+		<textarea id="exampleFormControlTextarea1" class="form-control" name="melhorar"></textarea>
 	</label>
 	
 	<label for="exampleFormControlTextarea1">
-		<strong>Você já desenvolveu algum projeto ?</strong>
-		<textarea id="exampleFormControlTextarea1" class="form-control" name="projeto"></textarea>
-	</label>
-	
-	<label>
-		<strong>Qual e sua especialidade ?</strong><br>
-		<input type="radio" name="especialidade" value="Front-end">
-		<span>Front-end</span>
-		<input type="radio" name="especialidade" value="Back-end">
-		<span>Back-end</span>
-		<input type="radio" name="especialidade" value="banco dados">
-		<span>Banco de dados</span>
-		<input type="radio" name="especialidade" value="Nenhum">
-		<span>Nenhuma</span>
+		<strong>Você tem algum conteudo na area de programação para sugerir ?</strong>
+		<textarea id="exampleFormControlTextarea1" class="form-control" name="sugerir"></textarea>
 	</label>
 	
 	<label for="exampleFormControlTextarea1">
-		<strong>Qual e sua meta como programador para o ano de 2018 ?</strong>
-		<textarea id="exampleFormControlTextarea1" class="form-control" name="meta"></textarea>
-	</label>
-	
-	<label for="exampleFormControlTextarea1">
-		<strong>Você já trabalho na área de programação ou áreas afins ?</strong>
-		<textarea id="exampleFormControlTextarea1" class="form-control" name="trabalho"></textarea>
+		<strong>A sua disponibilidade para os encontros presenciais no Casulo ainda e a mesma ?</strong>
+		<textarea id="exampleFormControlTextarea1" class="form-control" name="disponibilidade"></textarea>
 	</label>
 	
 	<p>(<strong> * </strong>) = Campo obrigatório </p>
 	<div class="form-check">
     <label class="form-check-label">
-      <input type="checkbox" class="form-check-input required" name="check">
+      <input type="checkbox" class="form-check-input" name="check" required >
       <strong> Autorizo *</strong>
     </label>
   	</div>
 	<br><input class="btn btn-primary" type="submit" name="submit" value="Enviar">
-	<input type="hidden" name="form_type" value="inscricao">
+	<input type="hidden" name="form_type" value="fedback">
 </form>
 </div>
 <footer class="footer">

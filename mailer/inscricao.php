@@ -26,7 +26,6 @@ if ( isset( $_POST['email'] ) ) {
 		$message .= '<tr><td style="width: 120px;">Nome</td><td><strong>' . $nome . '</strong></td></tr>';
 		$message .= '<tr><td>Email</td><td><strong>' . $email . '</strong></td></tr>';
 		$message .= '<tr><td>Numero</td><td><strong>' . $numero . '</strong></td></tr>';
-		$message .= '<tr><td>participar</td><td><strong>' . $participar . '</strong></td></tr>';
 		$message .= '<tr><td>Dias</td><td><strong>' . $dias . '</strong></td></tr>';
 		$message .= '<tr><td>Como</td><td><strong>' . $como . '</strong></td></tr>';
 		$message .= '<tr><td>Casulo 2018</td><td><strong>' . $espera . '</strong></td></tr>';

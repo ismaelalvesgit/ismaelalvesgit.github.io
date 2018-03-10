@@ -2,14 +2,6 @@
 /* =========================================== PRINCIPAL RECEPTOR =========================================== */
 $to = 'seu_email@gmail.com';						// TODO: Substitua pelo seu e-mail principal
 
-/* ========================================= APPOINTMENT FORM ============================================ */
-
-$send_to_artist = false;							// Defina TRUE para enviar a mensagem também para o artista selecionado
-$artists_email = array(
-	//'Artist A' => 'artist_a@domain.com',
-    //'Artist B' => 'artist_b@domain.com',
-	);
-
 /* ============================================ SMTP condigurações ============================================ */
 
 $smtp = false;							// Defina TRUE se desejar usar um servidor smtp personalizado

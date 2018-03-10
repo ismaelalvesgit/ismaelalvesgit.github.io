@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
 <head>
-	<title>Contato</title>
+	<title>Exercicios</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="img/icon.png">
@@ -48,35 +48,29 @@
 			     <ul>
 					   <li><a href="recadastramento.html">Recadastramento</a></li>
 					   <li><a href="inscricao.html">Inscrição</a></li>
-                     <li><a href="exercicios.html">Exercícios</a></li>
+                    <li class="selected"><a href="exercicios.html">Exercícios</a></li>
                      <li><a href="fedback.html">Fedback</a></li>
 				    </ul>
 			   </li>
+          
 			   <li><a href="team.html">Equipe</a></li>
-         <li class="selected"><a href="contato.html">Contato</a></li>  	
+         <li><a href="contato.html">Contato</a></li>  	
+        
 		  </ul>
 	</nav>
 </div>
 </div>
 </div>
 </header>
-<div class="title">
-  <h4>Contato</h4>
-  <p>Estamos prontos para atender todas as suas dúvidas.</p>
-</div>
-<div class="row map">
-<div class="col-md-6 map_text">
-  <h2>Nossa localização</h2>
-  <p>Nossos encontros São feitos por dois meios, um encontro fisico em sala de aula para debater questões de programação iniciante, medio e avançado e por meios de video aula online.</p>
-</div>
-<div class="map_local col-md-6">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.3721503945226!2d-38.53824848478237!3d-3.728787397287128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c749af23477497%3A0xd9c84f2bcc895058!2zRmFjdWxkYWRlIEV2b2x1w6fDo28!5e0!3m2!1spt-BR!2sbr!4v1515538002168" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
+<div class="title" style="background: url(img/exercicios.jpg); color: #fff;">
+  <h4>Exercicios</h4>
+  <p>Esta page foi feita para receber os exercicios passados em sala de aula para fixação de conteúdo passado.</p>
 </div>
     <div class="contato container">
-        <h2 class="heading text-center">Uma pergunta? <span class="text-muted">Escreva-nos agora!</span></h2>
-            <p>Nos estamos preparados para responder qualquer pergunta sua :)</p>
-        <form class="contact-form row" action="mailer/contato.php" method="post">
+        <h2 class="heading text-center">Recebimento de <span class="text-muted">Exercicios</span></h2>
+            <p><a href="contato.html">Nos estamos preparados para responder qualquer pergunta sua :)</a></p>
+        
+        <form class="contact-form row" action="mailer/exercicios.php" method="post">
             <div class="col-md-6">
                 <label for="exampleFormControlInput1">
                 <strong><i class="fa fa-user"></i> Nome *</strong>
@@ -84,22 +78,24 @@
                 </label>
                 <label for="exampleFormControlInput1">
                 <strong><i class="fa fa-envelope"></i> Email *</strong>
-                <input id="exampleFormControlInput1" class="form-control required" type="email" name="email" placeholder="Seu Email">
+                <input id="exampleFormControlInput1" class="form-control required" type="email" name="email" placeholder="Seu Email" required>
                 </label>
                 <label for="exampleFormControlInput1">
                 <strong><i class="fa fa-phone"></i> Numero *</strong>
-                <input id="exampleFormControlInput1" class="form-control required" type="tel" pattern="^\d({3})\d{5}-\d{4}$" name="numero" placeholder="(XXX)XXXXX-XXXX" required onkeypress="mascara(this)" maxlength="16">
+                <input id="exampleFormControlInput1" class="form-control required" type="tel" pattern="^\d({3})\d{5}-\d{4}$" name="numero" placeholder="Whatsapp" onkeypress="mascara(this)" maxlength="16" required >
                 </label>
             </div>
             <div class="col-md-6">
-                <label for="exampleFormControlTextarea1">
-                <strong>Messagem *</strong>
-                <textarea id="exampleFormControlTextarea1"  class="form-control" name="menssagem" required></textarea>
-                </label>
+               
+                <label for="exampleFormControlInput1">
+		          <strong><i class="fa fa-github"></i> Exercicios *</strong>
+		          <input id="exampleFormControlInput1" class="form-control required" type="text" name="exercicio" placeholder="Seu link do github" required>
+	           </label>
+               
                 <p>( <strong>*</strong> ) = Campo obrigatório</p>
-               	<input class="btn btn-primary" type="submit" name="submit" value="Enviar Messagem">
+               	<input class="btn btn-primary" type="submit" name="submit" value="Enviar Exercicio">
             </div>
-                <input type="hidden" name="form_type" value="contato">
+                <input type="hidden" name="form_type" value="exercicios">
         </form>
     </div>
 <footer class="footer">
